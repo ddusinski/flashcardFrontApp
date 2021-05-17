@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     fetchDict(myFlashcardId) {
-      fetch("api/dict?id=" + myFlashcardId)
+      fetch("api/dict/get/" + myFlashcardId)
           .then((response) => response.text())
           .then((data) => {
             this.msg = data
@@ -75,7 +75,7 @@ export default {
     },
     drawFlashcard() {
       this.pickedAnswer = '';
-      fetch("api/draw")
+      fetch("api/flashcard/get")
           .then((response) => response.json())
           .then((data) => {
             this.flashcardContent = data
@@ -83,7 +83,7 @@ export default {
     },
     async checkAnswer(flashcardId, answer) {
       if (answer) {
-        await fetch("api/answer?questionId=" + flashcardId + "&flashcardAnswer=" + answer)
+        await fetch("api/flashcard/answer?questionId=" + flashcardId + "&flashcardAnswer=" + answer)
             .then((response) => response.text())
             .then((data) => {
               this.flashcardResult = (data === "true")
@@ -102,7 +102,7 @@ export default {
     }
   },
   mounted() {
-    this.drawFlashcard()
+    // this.drawFlashcard()
   }
 }
 </script>
