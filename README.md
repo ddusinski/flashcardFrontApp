@@ -1,24 +1,9 @@
-# testvue
+# Flashcard Frond App
 
-## Project setup
-```
-npm install
-```
+An easy app for flashcard game. The idea was to use small english dictionary which I have created in txt file and used it for learning. After two years it was nearly 1000 pairs eng word - translation. I have used it to load data into my app
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Frontend - VUE.js using REST endpoints \
+Backend - Spring Boot REST application + JPA serving words
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
