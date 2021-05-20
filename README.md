@@ -5,5 +5,7 @@ An easy app for flashcard game. The idea was to use small english dictionary whi
 Frontend - VUE.js using REST endpoints \
 Backend - Spring Boot REST application + JPA serving words
 
+This application runs on
+https://dd-flashcard-app.herokuapp.com/
 
 
